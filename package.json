@@ -4,7 +4,8 @@
   "description": "Run script.py (web-scraping) on Node, serverless on GCP.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node --watch index.js"
   },
   "keywords": [
     "web-scraping-ecommerce"
