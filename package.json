@@ -1,7 +1,7 @@
 {
   "name": "backend--node-python",
   "version": "1.0.0",
-  "description": "Run script.py (web-scraping) on Node, serverless on GCP.",
+  "description": "Run script.py (web-scraping) on Node (serverless).",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
