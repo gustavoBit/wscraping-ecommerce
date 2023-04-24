@@ -9,7 +9,7 @@
     "watch": "node --watch index.js"
   },
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   },
   "keywords": [
     "web-scraping-ecommerce"
