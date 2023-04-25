@@ -41,7 +41,7 @@ if status_code == 200:
         array_json.append(product_json)
 
     # Mostramos el array por pantalla
-    print(json.dumps(array_json))
+    print(json.dumps(array_json, indent=2))
 
 # Si el Status Code es diferente de 200, informamos que hubo un error
 else:

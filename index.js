@@ -15,7 +15,7 @@ app.get("/wsc-ketal", (req, res) => {
   const process = spawn("python3", ["wsc.ketal.py", param]);
   process.stdout.on("data", (data) => {
     console.log(`stdout: ${data}`);
-    res.send(data);
+    res.json(JSON.parse(data));
   });
   process.stderr.on("data", (data) => {
     console.log(`stderr: ${data}`);
@@ -33,7 +33,7 @@ app.get("/my-endpoint", (req, res) => {
   const process = spawn("python3", ["script.py", param]);
   process.stdout.on("data", (data) => {
     console.log(`stdout: ${data}`);
-    res.send(data);
+    res.json({message: data.toString()});
   });
   process.stderr.on("data", (data) => {
     console.log(`stderr: ${data}`);
