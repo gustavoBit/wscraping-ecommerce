@@ -8,8 +8,11 @@ const app = express();
 app.use(cors());
 
 const port = process.env.PORT_LOCAL || 3000;
+const apiVersion = process.env.API_VERSION;
+// We define to route prefix for the API
+const apiPrefix = "/api/" + apiVersion;
 
-app.get("/wsc-ketal", (req, res) => {
+app.get(apiPrefix + "/wsc-ketal", (req, res) => {
   // const param = req.query.param;
   const paramUrl = req.query.requestUrl;
   console.log("paramUrl.toString()>>>>>", paramUrl.toString());
@@ -73,7 +76,7 @@ app.get("/wsc-ketal", (req, res) => {
   });
 });
 
-app.get("/my-endpoint", (req, res) => {
+app.get("/", (req, res) => {
   const param = req.query.someparam;
   console.log("PARAM", param);
 
