@@ -40,8 +40,7 @@ app.get(apiPrefix + "/wsc-ketal", (req, res) => {
       validation: [
         {
           field: `URL`, // requestUrl
-          /* eslint-disable-next-line max-len */
-          message: `La url que envíe debe ser de la página de búsqueda/filtrado (por ejemplo: ${baseUrl}alguna-categoria). NO puede ser de la página principal, sin embargo, si desea agregar el soporte/funcionalidad de esta página, ¡contáctenos! `,
+          message: `La url que envíe debe ser de la página de búsqueda/filtrado (por ejemplo: ${baseUrl}/alguna-categoria). NO puede ser de la página principal, sin embargo, si desea agregar el soporte/funcionalidad de esta página, ¡contáctenos! `,
         },
       ],
     });
