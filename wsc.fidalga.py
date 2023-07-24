@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 # WIP: FUNCTIONS SECTION
 def getMaxPages(text_total, page_size):
-    # print("text_total", text_total, page_size)
+    # print("text_total", text_total) // "e.g.: Mostrando 1 - 24 de 187 total"
     # Buscamos el índice del primer dígito del número
     indice_inicio = text_total.find("de") + 3
     # Buscamos el índice del último dígito del número
