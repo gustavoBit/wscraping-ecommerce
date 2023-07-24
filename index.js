@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 
-const port = process.env.PORT_LOCAL || 3000;
+const port = process.env.PORT_LOCAL || 9001; // NOTE: use this port because the PORT 3xxx was reserved by server
 const apiVersion = process.env.API_VERSION;
 // We define to route prefix for the API
 const apiPrefix = "/api/" + apiVersion;
