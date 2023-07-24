@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 
-const port = process.env.PORT_LOCAL || 3000;
+const port = process.env.PORT_LOCAL || 9001; // NOTE: use this port because the PORT 3xxx was reserved by server
 const apiVersion = process.env.API_VERSION;
 // We define to route prefix for the API
 const apiPrefix = "/api/" + apiVersion;
@@ -103,7 +103,7 @@ app.get(apiPrefix + "/wsc-fidalga", (req, res) => {
       validation: [
         {
           field: `URL`, // requestUrl
-          message: `La url que envíe debe ser de la página de búsqueda/filtrado (por ejemplo: ${baseUrl}/alguna-categoria). NO puede ser de la página principal, sin embargo, si desea agregar el soporte/funcionalidad de esta página, ¡contáctenos! `,
+          message: `La url que envíe debe ser de la página de búsqueda/filtrado (por ejemplo: ${baseUrl}/collections/alguna-categoria). NO puede ser de la página principal, sin embargo, si desea agregar el soporte/funcionalidad de esta página, ¡contáctenos!`,
         },
       ],
     });
