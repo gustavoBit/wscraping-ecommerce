@@ -44,11 +44,15 @@ if status_code == 200:
 
         # Obtenemos la cantidad total de paginas
         # "li", {"class": "pagination__page pagination__page--total"}
-        pages_text = html.find("div", {"class": "page-total"}).text
-        page_size = html.find("span", attrs={"name": "paginateBy"}).get_text(strip=True)
-
-        max_pages = getMaxPages(pages_text, page_size)
-        # print("max_pages", max_pages)
+        # NOTE: Add Controller <if> for verify element html exists (drawed), this occurs when is only page
+        max_pages = 1
+        if html.find("div", {"class": "page-total"}) != None:
+            pages_text = html.find("div", {"class": "page-total"}).text
+            page_size = html.find("span", attrs={"name": "paginateBy"}).get_text(
+                strip=True
+            )
+            max_pages = getMaxPages(pages_text, page_size)
+            # print("max_pages", max_pages)
 
         # Inicializamos el array final
         final_data = []
